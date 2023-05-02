@@ -45,11 +45,38 @@ body {
 
 /* Ends header */
 
+.container-titulo {
+    background-color: purple;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
 .titulo-relato {
+    margin: 0 auto;
     color: black;
     background-color: purple;
     width: 100%;
     flex-grow: 1;
+    display: block;
+    /* font-family: monospace; */
+    white-space: nowrap;
+    width: 21ch;
+
+    animation: typing 2s steps(21) forwards,
+    blink .5s steps(1) 2s forwards;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 21ch; }
+}
+
+@keyframes blink{
+    0% { border-color: transparent; }
+    100% { border-color:purple; }
 }
 
 #contrast-button {
@@ -68,7 +95,7 @@ body {
 
 .content {
     color: purple;
-    padding: 0 3em 0 3em;
+    padding: 0 1.5em 0 2.5em;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -150,6 +177,8 @@ p {
 /* Starts footer */
 
 .footer {
+    margin: 0 auto;
+    padding-top: 2em;
     background-color: purple;
     display: flex;
     flex-direction: column;
